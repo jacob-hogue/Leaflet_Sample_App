@@ -1,4 +1,6 @@
-#mapid { 
-  height: 400px; 
-  width: 400px;
+html, body {
+  height: 95%;
+}
+#mapid {
+  height: 100%;
 }
