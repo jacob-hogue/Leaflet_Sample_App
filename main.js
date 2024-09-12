@@ -3,9 +3,9 @@ var mymap = L.map('mapid').setView([35.05, 30], 11);
 //'http://a.tile.stamen.com/toner/{z}/{x}/{y}.png'
 //https://wiki.openstreetmap.org/wiki/Tile_servers
  // load a tile layer
-L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    maxZoom: 19,
-    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+L.tileLayer('http://a.tile.stamen.com/toner/{z}/{x}/{y}.png', {
+        attribution: 'Map tiles by Stamen Design, under CC BY 3.0.',
+        maxZoom: 18
 }).addTo(mymap);
 
 
