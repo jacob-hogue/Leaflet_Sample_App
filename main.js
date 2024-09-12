@@ -2,7 +2,7 @@ var mymap = L.map('mapid').setView([35.05, 30], 11);
 //https://a.tile.openstreetmap.org/{z}/{x}/{y}.png
 //'http://a.tile.stamen.com/toner/{z}/{x}/{y}.png'
 //https://wiki.openstreetmap.org/wiki/Tile_servers
-L.tileLayer('https://a.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+L.tileLayer('http://a.tile.stamen.com/toner/{z}/{x}/{y}.png', {
         attribution: 'Map tiles by Stamen Design, under CC BY 3.0.',
         maxZoom: 18
 }).addTo(mymap);
