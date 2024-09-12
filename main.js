@@ -1,10 +1,10 @@
 var mymap = L.map('mapid').setView([35.05, 30], 11);
-var Stamen_Terrain = L.tileLayer('https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png', {
-	attribution: '&copy; <a href="https://stadiamaps.com/">Stadia Maps</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors',
-	subdomains: 'abcd',
-	minZoom: 0,
-	maxZoom: 18,
-	ext: 'png'
+//https://a.tile.openstreetmap.org/{z}/{x}/{y}.png
+//'http://a.tile.stamen.com/toner/{z}/{x}/{y}.png'
+//https://wiki.openstreetmap.org/wiki/Tile_servers
+L.tileLayer('https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png', {
+        attribution: '&copy; <a href="https://stadiamaps.com/">Stadia Maps</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors',
+        maxZoom: 15
 }).addTo(mymap);
 
 
@@ -18,7 +18,8 @@ $.getJSON('https://raw.githubusercontent.com/gbrunner/adv-programming-for-gis-an
 
 
 // load GeoJSON from an external file
- $.getJSON("https://raw.githubusercontent.com/gbrunner/adv-programming-for-gis-and-rs/master/Web%20Development%20Module/Unit%201%20-%20GitHub%20and%20Leaflet/chicago.geojson",function(data){
+
+$.getJSON("https://raw.githubusercontent.com/gbrunner/adv-programming-for-gis-and-rs/master/Web%20Development%20Module/Unit%201%20-%20GitHub%20and%20Leaflet/chicago.geojson",function(data){
     // add GeoJSON layer to the map once the file is loaded
     L.geoJson(data).addTo(mymap);
   }
