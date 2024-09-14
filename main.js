@@ -2,9 +2,9 @@ var mymap = L.map('mapid').setView([35.05, 30], 11);
 //https://a.tile.openstreetmap.org/{z}/{x}/{y}.png
 //'http://a.tile.stamen.com/toner/{z}/{x}/{y}.png'
 //https://wiki.openstreetmap.org/wiki/Tile_servers
-L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    maxZoom: 15,
-    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+L.tileLayer('https://tiles.stadiamaps.com/tiles/alidade_smooth/{z}/{x}/{y}.png?api_key=YOUR_API_KEY', {
+    maxZoom: 18,
+    attribution: '&copy; <a href="https://stadiamaps.com/">Stadia Maps</a> contributors'
 }).addTo(mymap);
 
 $.getJSON('https://raw.githubusercontent.com/gbrunner/adv-programming-for-gis-and-rs/master/Web%20Development%20Module/Unit%201%20-%20GitHub%20and%20Leaflet/rodents.geojson', function(data) {
