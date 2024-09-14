@@ -17,7 +17,22 @@ $.getJSON('https://raw.githubusercontent.com/gbrunner/adv-programming-for-gis-an
   var heat = L.heatLayer(coordinatesOnly).addTo(mymap);
 });
 
-
+ $.getJSON("https://raw.githubusercontent.com/gbrunner/adv-programming-for-gis-and-rs/master/Web%20Development%20Module/Unit%201%20-%20GitHub%20and%20Leaflet/rodents.geojson",function(data){
+    var ratIcon = L.icon({
+      iconUrl: 'http://andywoodruff.com/maptime-leaflet/rat.png',
+      iconSize: [60,50]
+    });
+    var rodents = L.geoJson(data,{
+      pointToLayer: function(feature,latlng){
+        var marker = L.marker(latlng,{icon: ratIcon});
+        marker.bindPopup(feature.properties.Location + '<br/>' + feature.properties.OPEN_DT);
+        return marker;
+      }
+    });
+    var clusters = L.markerClusterGroup();
+    clusters.addLayer(rodents);
+    map.addLayer(clusters);
+});
 // load GeoJSON from an external file
 
 $.getJSON("https://raw.githubusercontent.com/gbrunner/adv-programming-for-gis-and-rs/master/Web%20Development%20Module/Unit%201%20-%20GitHub%20and%20Leaflet/chicago.geojson",function(data){
