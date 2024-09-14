@@ -31,7 +31,7 @@ $.getJSON('https://raw.githubusercontent.com/gbrunner/adv-programming-for-gis-an
     });
     var clusters = L.markerClusterGroup();
     clusters.addLayer(rodents);
-    map.addLayer(clusters);
+    mymap.addLayer(clusters);
 });
 // load GeoJSON from an external file
 
